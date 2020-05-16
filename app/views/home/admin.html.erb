@@ -1,0 +1,27 @@
+<h1>Admin</h1>
+
+<% if user_signed_in? %>
+  <ul>
+    <li>
+      <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+    </li>
+
+    <li>
+      Voici ton email : <%= current_user.email %>
+    </li>
+
+    <li>
+      <%= link_to "Modifier le compte", edit_user_registration_path %>
+    </li>
+
+  <% else %>
+
+    <li>    
+      <%= link_to "Se connecter", new_user_session_path %>
+    </li>
+
+    <li>
+      <%= link_to "S'inscrire", new_user_registration_path %>
+    </li>
+  </ul>
+<% end %>
