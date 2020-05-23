@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @publication.title %>
+</p>
+
+<% if @publication.image %>
+  <div style="width:400px; height:auto">
+    <%= image_tag(@publication.image, style:'width:100%') %>
+  </div>
+<% else %>
+  <p> Coucou <p>
+<% end %>
+
+<p>
+  <strong>Body:</strong>
+  <%= @publication.body %>
+</p>
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>

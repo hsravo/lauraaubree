@@ -2,6 +2,9 @@ class User < ApplicationRecord
 
   attr_accessor :login
 
+  has_many :publications
+  has_many :projects
+
   validates :username, presence: :true, uniqueness: {case_sensitive: false}, format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
 
   # Include default devise modules. Others available are:

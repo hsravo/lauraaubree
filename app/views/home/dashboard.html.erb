@@ -1,0 +1,25 @@
+<h1>Dashboard</h1>
+
+<ul>
+<% if user_signed_in? %>
+  <li>
+    <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+  </li>
+
+  <li>
+    Voici ton email : <%= current_user.email %>
+  </li>
+
+  <li>
+    <%= link_to "Modifier le compte", edit_user_registration_path %>
+  </li>
+<% end %>
+  </br>
+  <li>
+    <%= link_to "Publications", publications_path %>
+  </li>
+
+  <li>
+    <%= link_to "Projets", projects_path %>
+  </li>
+</ul>

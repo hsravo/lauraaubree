@@ -6,4 +6,6 @@ before_action :configure_devise_parameters, if: :devise_controller?
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:username, :email, :password, :password_confirmation)}
   end
 
+  add_flash_types :success, :danger
+  
 end
