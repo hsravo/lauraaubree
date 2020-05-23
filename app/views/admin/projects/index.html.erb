@@ -16,9 +16,9 @@
       <tr>
         <td><%= project.title %></td>
         <td><%= project.body %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_project_path(project) %></td>
+        <td><%= link_to 'Edit', edit_admin_project_path(project) %></td>
+        <td><%= link_to 'Destroy',[:admin, project], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,5 +26,5 @@
 
 <br>
 
-<li><%= link_to 'New Project', new_project_path %></li>
+<li><%= link_to 'New Project', new_admin_project_path %></li>
 <li><%= link_to "Dashboard", dashboard_path %></li>

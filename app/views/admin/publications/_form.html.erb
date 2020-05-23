@@ -1,4 +1,4 @@
-<%= form_for publication, html: {class: 'form-horizontal'} do |form| %>
+<%= form_for @publication, url: [:admin, @publication], html: {class: 'form-horizontal'} do |form| %>
 
   <% if @publication.errors.any? %>
     <div class="alert alert-danger">
