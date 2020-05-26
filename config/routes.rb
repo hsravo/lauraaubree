@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/admin', to: 'home#admin'
   get '/dashboard', to: 'home#dashboard'
 
-  scope 'administrator', module: 'admin', as: 'admin' do 
+  scope module: 'admin' do #under admin scope without admin prefix
     resources :projects
     resources :publications
   end

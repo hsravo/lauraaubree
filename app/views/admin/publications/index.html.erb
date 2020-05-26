@@ -16,11 +16,11 @@
       <tr>
         <td><%= publication.title %></td>
         <td><%= publication.body %></td>
-        <td><%= link_to 'Show', admin_publication_path(publication) %></td>
+        <td><%= link_to 'Show', publication_path(publication) %></td>
         <% if user_signed_in? %>
           <% if isAdmin? %>
-            <td><%= link_to 'Edit', edit_admin_publication_path(publication) %></td>
-            <td><%= link_to 'Destroy', [:admin, publication], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+            <td><%= link_to 'Destroy', [publication], method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         <% end %>
       </tr>
@@ -32,7 +32,7 @@
 
 <% if user_signed_in? %>
   <% if isAdmin? %>
-    <li><%= link_to 'New Publication', new_admin_publication_path %></li>
+    <li><%= link_to 'New Publication', new_publication_path %></li>
     <li><%= link_to "Dashboard", dashboard_path %></li>
   <% end %>
 <% end %>

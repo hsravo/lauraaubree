@@ -23,7 +23,7 @@ module Admin
       @publication = Publication.new(publication_params)
       @publication.user = current_user
       if @publication.save
-        redirect_to admin_publications_path, success: 'Nouvelle publication ajoutée !'
+        redirect_to publications_path, success: 'Nouvelle publication ajoutée !'
       else
         render :new
       end
@@ -32,7 +32,7 @@ module Admin
     def update
       @publication.update(publication_params)
       if @publication.save #si c'est tout OK, on redirige au pets index
-        redirect_to admin_publications_path, success: 'Modifications effectuées !'
+        redirect_to publications_path, success: 'Modifications effectuées !'
       else
         render :edit
       end
@@ -40,7 +40,7 @@ module Admin
 
     def destroy
       @publication.destroy
-      redirect_to admin_publications_path, success: 'Suppression effectuée !'
+      redirect_to publications_path, success: 'Suppression effectuée !'
     end
 
     # Use callbacks to share common setup or constraints between actions.

@@ -7,7 +7,7 @@
 
 <% (0...@project.images.count).each do |image| %>
   <div style="width:400px; height:400px">
-    <%= image_tag(@project.images[image], style:"width:100%; height:auto") %>
+    <%= image_tag(@project.images[image], style:"width:auto; height:100%") %>
   </div>
 <% end %>
 
@@ -18,7 +18,7 @@
 
 <% if user_signed_in? %>
   <% if isAdmin? %>
-    <%= link_to 'Edit', edit_admin_project_path(@project) %> |
-    <%= link_to 'Back', admin_projects_path %>
+    <%= link_to 'Edit', edit_project_path(@project) %> |
+    <%= link_to 'Back', projects_path %>
   <% end %>
 <% end %>

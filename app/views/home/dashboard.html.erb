@@ -18,11 +18,11 @@
   <% if current_user.role == 'admin' %>
     </br>
     <li>
-      <%= link_to "Publications", admin_publications_path %>
+      <%= link_to "Publications", publications_path %>
     </li>
 
     <li>
-      <%= link_to "Projets", admin_projects_path, class: "nav-link active" %></li>
+      <%= link_to "Projets", projects_path, class: "nav-link active" %></li>
     </li>
   <% end %>
 </ul>
