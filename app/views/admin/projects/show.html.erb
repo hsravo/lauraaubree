@@ -17,6 +17,8 @@
 </p>
 
 <% if user_signed_in? %>
-  <%= link_to 'Edit', edit_admin_project_path(@project) %> |
-  <%= link_to 'Back', admin_projects_path %>
+  <% if isAdmin? %>
+    <%= link_to 'Edit', edit_admin_project_path(@project) %> |
+    <%= link_to 'Back', admin_projects_path %>
+  <% end %>
 <% end %>

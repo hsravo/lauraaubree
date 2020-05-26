@@ -7,5 +7,7 @@ before_action :configure_devise_parameters, if: :devise_controller?
   end
 
   add_flash_types :success, :danger
+
+
   
 end

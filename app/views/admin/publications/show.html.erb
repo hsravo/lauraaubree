@@ -19,6 +19,8 @@
 </p>
 
 <% if user_signed_in? %>
-  <%= link_to 'Edit', edit_admin_publication_path(@publication) %> |
-  <%= link_to 'Back', admin_publications_path %>
+  <% if isAdmin? %>
+    <%= link_to 'Edit', edit_admin_publication_path(@publication) %> |
+    <%= link_to 'Back', admin_publications_path %>
+  <% end %>
 <% end %>
