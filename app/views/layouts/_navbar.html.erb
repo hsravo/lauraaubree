@@ -1,0 +1,27 @@
+<nav class="navbar" id="nav-desktop">
+  <div class="col">
+    <ul>
+      <li><i class="fa fa-bars" id="openNav" aria-hidden="true"></i></li>
+      <li><h5  id="principal"><a href="https://laura-aubree.fr/">Laura Aubrée</a></h5></li>
+      <li><a href="https://www.linkedin.com/in/laura-aubrée-27bb8a135" target="_blank"><i class="fab fa-linkedin-in" id="social"></a></i></li>
+      <li><a href="https://www.instagram.com/aubreelaura" target="_blank"><i class="fab fa-instagram" id="social"></a></i></li>
+      <% if user_signed_in? %>
+        <li><%= link_to dashboard_path do %>
+          <i class="fas fa-cog" id="social"></i></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>  
+
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+    <div class="overlay-content">
+
+      <a class="nav-title" href="https://laura-aubree.fr/">Laura Aubrée</a>
+      <a class="nav-title" href="https://laura-aubree.fr/allprojects">Projects</a>
+      <a class="nav-title" href="https://laura-aubree.fr/publications">Publications</a>
+      <a class="nav-title" href="https://laura-aubree.fr/about">About</a>
+      <a class="nav-title" href="https://laura-aubree.fr/contact">Contact</a>
+    </div>
+  </div>
+</nav>
