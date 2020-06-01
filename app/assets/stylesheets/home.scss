@@ -1,63 +1,162 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@media only screen and (max-width: 730px) {
 
-/* HOME INDEX SLIDER */
+  #homeslider {
+    float:center;
+  }
 
-body {
-  margin-top: 0px;
-  height:100%;
-  position: relative;
-  background: #fff;
-  text-align: center;
-  padding-left: 25px;
-  padding-right: 25px;
-  font-family: 'PT Serif', serif;
+  .slider {
+    max-width: 300px;
+    height: 200px;
+    margin: 20px auto -160px;
+    position: relative;
+  }
+
 }
 
-.container {
-  float: center;
-  background-size: cover;
-  padding-top: 18px;
+@media only screen and (min-width: 730px) and (max-width: 870px) {
+
+  #homeslider {
+    float:center;
+  }
+
+  .slider {
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto -160px;
+    position: relative;
+  }
+
 }
 
-.container img {
+@media only screen and (min-width: 870px) {
+
+  #homeslider {
+    float:center;
+  }
+
+  .slider {
+    max-width: 700px;
+    height: 466px;
+    margin: 20px auto -160px;
+    position: relative;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  #homeslider {
+    float:center;
+  }
+
+  .slider {
+    max-width: 1100px;
+    height: 500px;
+    margin: 20px auto -160px;
+    position: relative;
+  }
+
+}
+
+.slide1,.slide2,.slide3,.slide4,.slide5, .slide6 {
+  position: absolute;
   width: 100%;
-  max-height: 550px;
-  object-fit: cover !important;
+  height: 100%;
 }
+.slide1 {
+  background: url(/images/home/25520021-2.jpg)no-repeat center;
+      background-size: contain;
+    animation:fade 36s infinite;
+-webkit-animation:fade 36s infinite;
 
-@media only screen and (min-width: 590px) and (max-width: 730px) {
-
-  .container {
-    padding-top: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height:350px;
-  }
-
-  .container img {
-    min-height: 350px;
-    object-fit: cover !important;
-  }
-
+} 
+.slide2 {
+  background: url(/images/home/Patagonia-019.jpg)no-repeat center;
+      background-size: contain;
+    animation:fade2 36s infinite;
+-webkit-animation:fade2 36s infinite;
 }
-
-@media only screen and (max-width: 590px) {
-
-  .container {
-    padding-top: 160px;
-    padding-bottom:100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height:200px;
-  }
-
-  .container img {
-    width: 100%;
-    object-fit: cover !important;
-  }
-
+.slide3 {
+    background: url(/images/home/collodion184.jpg)no-repeat center;
+      background-size: contain;
+    animation:fade3 36s infinite;
+-webkit-animation:fade3 36s infinite;
+}
+.slide4 {
+    background: url(/images/home/expo_revelat04.jpg)no-repeat center;
+      background-size: contain;
+    animation:fade3 36s infinite;
+-webkit-animation:fade4 36s infinite;
+}
+.slide5 {
+    background: url(/images/home/julien_pola.jpg)no-repeat center;
+      background-size: contain;
+    animation:fade3 36s infinite;
+-webkit-animation:fade5 36s infinite;
+}
+.slide6 {
+    background: url(/images/home/Argentina-019.jpg)no-repeat center;
+      background-size: contain;
+    animation:fade3 36s infinite;
+-webkit-animation:fade6 36s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 0}
+  50% { opacity: 0}
+  66.667% { opacity: 0}
+  83.333% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  16.667% { opacity: 1}
+  33.333% { opacity: 0}
+  50% { opacity: 0}
+  66.667% { opacity: 0}
+  83.333% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 1}
+  50% { opacity: 0}
+  66.667% { opacity: 0}
+  83.333% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade4
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 0}
+  50% { opacity: 1}
+  66.667% { opacity: 0}
+  83.333% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade5
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 0}
+  50% { opacity: 0}
+  66.667% { opacity: 1}
+  83.333% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade6
+{
+  0%   {opacity:0}
+  16.667% { opacity: 0}
+  33.333% { opacity: 0}
+  50% { opacity: 0}
+  66.667% { opacity: 0}
+  83.333% { opacity: 1}
+  100% { opacity: 0}
 }

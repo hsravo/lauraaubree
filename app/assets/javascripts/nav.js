@@ -1,10 +1,10 @@
 // NAVBAR + FOOTER + LOADER
 
-$('#openNav').on('click', function() {
+$(document).on('click', '#openNav', function() {
   $('#myNav').css("width", "100%");
 });
 
-$('#closeNav').on('click', function() {
+$(document).on('click', '#closeNav', function() {
   $('#myNav').css("width", "0%");
 });
 
@@ -18,5 +18,9 @@ $(function() {
 });
 
 $(function() {
-  $('.footer').hide().delay(2000).fadeIn(1500);
+  $('.footer').hide().delay(2500).fadeIn(1500);
+});
+
+$(function() {
+  $('#homeslider').hide().delay(1500).fadeIn(1000);
 });
