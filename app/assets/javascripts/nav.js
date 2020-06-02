@@ -12,6 +12,7 @@ $(function() {
   $('.loader-container').delay(1000).fadeOut(800);
 });
 
+// HOME INDEX NAVBAR + FOOTER + SLIDER
 
 $(function() {
   $('.navbar').hide().delay(1000).fadeIn(1000);
@@ -22,5 +23,5 @@ $(function() {
 });
 
 $(function() {
-  $('#homeslider').hide().delay(1500).fadeIn(1000);
+  $('#homeslider').hide().delay(1000).fadeIn(1000);
 });

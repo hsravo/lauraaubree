@@ -1,3 +1,6 @@
+/* HOME INDEX SLIDER */
+
+
 @media only screen and (max-width: 730px) {
 
   #homeslider {
@@ -50,8 +53,8 @@
   }
 
   .slider {
-    max-width: 1100px;
-    height: 500px;
+    max-width: 1110px;
+    height: 550px;
     margin: 20px auto -160px;
     position: relative;
   }
@@ -65,38 +68,38 @@
 }
 .slide1 {
   background: url(/images/home/25520021-2.jpg)no-repeat center;
-      background-size: contain;
+      background-size: cover;
     animation:fade 36s infinite;
 -webkit-animation:fade 36s infinite;
 
 } 
 .slide2 {
   background: url(/images/home/Patagonia-019.jpg)no-repeat center;
-      background-size: contain;
+      background-size: cover;
     animation:fade2 36s infinite;
 -webkit-animation:fade2 36s infinite;
 }
 .slide3 {
     background: url(/images/home/collodion184.jpg)no-repeat center;
-      background-size: contain;
+      background-size: cover;
     animation:fade3 36s infinite;
 -webkit-animation:fade3 36s infinite;
 }
 .slide4 {
     background: url(/images/home/expo_revelat04.jpg)no-repeat center;
-      background-size: contain;
+      background-size: cover;
     animation:fade3 36s infinite;
 -webkit-animation:fade4 36s infinite;
 }
 .slide5 {
     background: url(/images/home/julien_pola.jpg)no-repeat center;
-      background-size: contain;
+      background-size: cover;
     animation:fade3 36s infinite;
 -webkit-animation:fade5 36s infinite;
 }
 .slide6 {
     background: url(/images/home/Argentina-019.jpg)no-repeat center;
-      background-size: contain;
+      background-size: cover;
     animation:fade3 36s infinite;
 -webkit-animation:fade6 36s infinite;
 }
