@@ -1,3 +1,5 @@
+// ABOUT PAGE
+
 $(function() {
   $('.about-title').hide().delay(1200).fadeIn(1000);
 });
@@ -21,10 +23,3 @@ $(function() {
 $(function() {
   $('.profile-img').hide().delay(1000).fadeIn(1000);
 });
-
-window.onload = function() {
-    baguetteBox.run('.row', {
-      animation: 'fadeIn',
-      buttons: false
-    });
-};

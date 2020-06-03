@@ -25,3 +25,4 @@ $(function() {
 $(function() {
   $('#homeslider').hide().delay(1000).fadeIn(1000);
 });
+
