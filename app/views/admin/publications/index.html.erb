@@ -2,31 +2,23 @@
 
 <h1>Publications</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row" id="desktop-gallery">
+  <div class="imgSlider gallery" id="img-column">
     <% @publications.each do |publication| %>
-      <tr>
-        <td><%= publication.title %></td>
-        <td><%= publication.body %></td>
-        <td><%= link_to 'Show', publication_path(publication) %></td>
-        <% if user_signed_in? %>
-          <% if isAdmin? %>
-            <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
-            <td><%= link_to 'Destroy', [publication], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        <% end %>
-      </tr>
+      <%= link_to image_tag(publication.image) do %>
+        <% image_tag(publication.image) %>  
+      <% end %>
+      <% if user_signed_in? %>
+      <% if isAdmin? %>
+        <%= link_to 'Show', publication_path(publication) %>
+        <%= link_to 'Edit', edit_publication_path(publication) %>
+        <%= link_to 'Destroy', [publication], method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
     <% end %>
-  </tbody>
-</table>
+
+    <% end %>
+  </div>
+</div>
 
 <br>
 
@@ -36,3 +28,12 @@
     <li><%= link_to "Dashboard", dashboard_path %></li>
   <% end %>
 <% end %>
+
+<script>
+  window.onload = function() {
+    baguetteBox.run('.imgSlider', {
+      animation: 'fadeIn',
+      noScrollbars: true
+    });
+  };
+</script>

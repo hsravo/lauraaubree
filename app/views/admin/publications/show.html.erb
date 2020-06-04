@@ -6,7 +6,7 @@
 </p>
 
 <% if @publication.image %>
-  <div style="width:400px; height:400px">
+  <div class="container" style="width:400px; height:400px; display:flex; align-items: center;">
     <%= image_tag(@publication.image, style:'width:auto; height:100%') %>
   </div>
 <% else %>
