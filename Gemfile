@@ -8,6 +8,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'popper_js'
 gem 'simple_form'
+gem "rubycritic", require: false
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

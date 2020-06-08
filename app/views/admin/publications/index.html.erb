@@ -5,7 +5,7 @@
 <div class="row" id="desktop-gallery">
   <div class="imgSlider gallery" id="img-column">
     <% @publications.each do |publication| %>
-      <%= link_to image_tag(publication.image) do %>
+      <%= link_to publication.image do %>
         <% image_tag(publication.image) %>  
       <% end %>
       <% if user_signed_in? %>
@@ -14,8 +14,7 @@
         <%= link_to 'Edit', edit_publication_path(publication) %>
         <%= link_to 'Destroy', [publication], method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
-    <% end %>
-
+      <% end %>
     <% end %>
   </div>
 </div>
