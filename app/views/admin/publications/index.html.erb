@@ -10,9 +10,24 @@
       <% end %>
       <% if user_signed_in? %>
       <% if isAdmin? %>
-        <%= link_to 'Show', publication_path(publication) %>
         <%= link_to 'Edit', edit_publication_path(publication) %>
         <%= link_to 'Destroy', [publication], method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row" id="mobile-gallery">
+  <div class="imgSlider gallery" id="img-column">
+    <% @publications.each do |publication| %>
+      <%= link_to publication.image do %>
+        <% image_tag(publication.image) %>  
+      <% end %>
+      <% if user_signed_in? %>
+      <% if isAdmin? %>
+        <%= link_to 'Modifier', edit_publication_path(publication) %>
+        <%= link_to 'Supprimer', [publication], method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
       <% end %>
     <% end %>

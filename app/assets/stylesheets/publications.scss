@@ -41,9 +41,6 @@ h1 {
     width: 300px;
     height: 300px;
     padding: 10px;
-  }
-
-  #img-column img {
     margin-top: 8px;
     vertical-align: middle;
     transition: 0.3s;
@@ -79,12 +76,16 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
     justify-content: center;
   }
 
   #img-column img {
+    object-fit: cover;
+    min-width: 250px;
+    height: 250px;
     margin-top: 20px;
     margin-bottom: 20px;
     flex: 100%;

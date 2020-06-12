@@ -9,7 +9,7 @@ $(document).on('click', '#closeNav', function() {
 });
 
 $(function() {
-  $('.loader-container').delay(1000).fadeOut(800);
+  $('.loader-container').delay(1500).fadeOut(800);
 });
 
 // HOME INDEX NAVBAR + FOOTER + SLIDER
@@ -19,10 +19,10 @@ $(function() {
 });
 
 $(function() {
-  $('.footer').hide().delay(2500).fadeIn(1500);
+  $('.footer').hide().delay(1500).fadeIn(1500);
 });
 
 $(function() {
-  $('#homeslider').hide().delay(1000).fadeIn(1000);
+  $('#homeslider').hide().delay(1500).fadeIn(1000);
 });
 

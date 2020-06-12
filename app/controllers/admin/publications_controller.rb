@@ -1,15 +1,12 @@
 module Admin
 
   class PublicationsController < ApplicationController
-    before_action :set_publication, only: [:show, :edit, :update, :destroy]
+    before_action :set_publication, only: [:edit, :update, :destroy]
     before_action :only_admin
-    skip_before_action :only_admin, only: [:show, :index]
+    skip_before_action :only_admin, only: [:index]
 
     def index
       @publications = Publication.all
-    end
-
-    def show
     end
 
     def new
