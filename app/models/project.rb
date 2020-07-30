@@ -1,6 +1,7 @@
 class Project < ApplicationRecord
 
   belongs_to :user
+  has_one_attached :cover
   has_many_attached :images
 
   validates :title, :body, presence: true 

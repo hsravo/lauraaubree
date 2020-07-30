@@ -2,31 +2,23 @@
 
 <h1>Projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.body %></td>
-        <td><%= link_to 'Show', project_path(project) %></td>
-        <% if user_signed_in? %>
-          <% if isAdmin? %>
-            <td><%= link_to 'Edit', edit_project_path(project) %></td>
-            <td><%= link_to 'Destroy',[project], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <div class="container" id="desktop-container">
+    <div class="row"> 
+      <% @projects.each do |project| %>
+        <div class="column" id="project-column">
+          <%= link_to project do %>
+            <% image_tag(project.cover, :class => "nav-title")  %>  
           <% end %>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <% if user_signed_in? %>
+          <% if isAdmin? %>
+            <%= link_to 'Modifier', edit_project_path(project) %>
+            <%= link_to 'Supprimer', [project], method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
 <br>
 

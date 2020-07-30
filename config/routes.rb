@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about'
   get '/contact', to: 'home#contact'
 
+
   scope module: 'admin' do #under admin scope without admin prefix
     resources :projects
     resources :publications

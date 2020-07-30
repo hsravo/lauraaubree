@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_05_23_141027) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
+    t.string "slug"
     t.text "body"
     t.bigint "user_id"
     t.datetime "created_at", null: false

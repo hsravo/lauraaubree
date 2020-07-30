@@ -1,3 +1,138 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+#project-column {
+  position: relative;
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+#project-column img {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  vertical-align: middle;
+}
+
+
+h1 {
+  font-family: 'PT Serif', serif;
+}
+
+
+#desktop-title {
+  color:#212529;
+  font-style: bold;
+  padding-top: 32px;
+}
+
+#desktop-container {
+  padding-left: 108px;
+}
+
+#main-title {
+  display:flex;
+  justify-content:center;
+}
+
+img {
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+}
+
+ 
+#project-column .overlay {
+  z-index:998;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #fff;
+}
+
+#project-column :hover .overlay {
+  opacity: 0.85;
+}
+
+.text {
+  color: #212529;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+  #project-column {
+    flex: 50%;
+    max-width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 750px) {
+  #project-column {
+    flex: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 1199px) {
+
+  #desktop-container {
+    padding-left: 75px;
+  }
+
+}   
+
+@media (max-width: 999px) {
+
+  #desktop-container {
+    padding-left: 50px;
+  }
+
+}
+
+@media (min-width: 750px) and (max-width: 870px) {
+
+  #desktop-container {
+    padding-left: 25px;
+  }
+
+}      
+
+@media (min-width: 730px) and (max-width: 750px) {
+
+  #desktop-container {
+    padding-left: 10px;
+  }
+
+}   
+
+@media (max-width: 730px) {
+
+  #desktop-container {
+    padding-left: 3px;
+  }
+
+}   

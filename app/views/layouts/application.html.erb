@@ -20,19 +20,7 @@
 
     <%= yield %>
       
-    <div class="container" style="padding-top:5rem;padding-bottom:5rem">
-      <% if flash[:success] %>
-        <div class="alert alert-success">
-          <%= flash[:success] %>
-        </div>
-      <% end %>
 
-      <% if flash[:danger] %>
-        <div class="alert alert-danger">
-          <%= flash[:danger] %>
-        </div>
-      <% end %>
-    </div>
   
     <%= render 'layouts/footer' %>
   

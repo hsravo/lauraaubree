@@ -3,8 +3,8 @@
 <h1>Publications</h1>
 
 <div class="row" id="desktop-gallery">
-  <div class="imgSlider gallery" id="img-column">
-    <% @publications.each do |publication| %>
+  <% @publications.each do |publication| %>
+    <div class="imgSlider gallery" id="img-column">
       <%= link_to publication.image do %>
         <% image_tag(publication.image) %>  
       <% end %>
@@ -14,8 +14,8 @@
         <%= link_to 'Destroy', [publication], method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 
 <div class="row" id="mobile-gallery">

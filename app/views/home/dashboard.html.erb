@@ -1,5 +1,19 @@
 <h1>Dashboard</h1>
 
+<div class="container" style="padding-top:1px;padding-bottom:1px">
+  <% if flash[:success] %>
+    <div class="alert alert-success">
+      <%= flash[:success] %>
+    </div>
+  <% end %>
+
+  <% if flash[:danger] %>
+    <div class="alert alert-danger">
+      <%= flash[:danger] %>
+    </div>
+  <% end %>
+</div>
+
 <ul>
   <% if user_signed_in? %>
     <li>
