@@ -444,3 +444,13 @@ a:hover {
 .publication_title_dashboard {
   padding-right:150px;
 }
+
+#dashboard-header {
+  background-image: url(asset-path("transition01.jpg"));
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 140px;
+  margin-right: 140px;
+}

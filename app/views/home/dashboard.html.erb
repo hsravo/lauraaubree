@@ -1,4 +1,35 @@
-<h1>Dashboard</h1>
+<header id="dashboard-header">
+
+  <h1>Dashboard</h1>
+
+  <ul>
+    <% if user_signed_in? %>
+    <li>
+      <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+    </li>
+
+    <li>
+      User : <%= current_user.email %>
+    </li>
+
+    <li>
+      <%= link_to "Modifier le compte", edit_user_registration_path %>
+    </li>
+    <% end %>
+
+    <% if current_user.role == 'admin' %>
+  </br>
+  <li>
+    <%= link_to "Publications", publications_path %>
+  </li>
+
+  <li>
+    <%= link_to "Projets", projects_path, class: "nav-link active" %></li>
+  </li>
+  <% end %>
+  </ul>
+
+</header>
 
 <div class="container" style="padding-top:1px;padding-bottom:1px">
   <% if flash[:success] %>
@@ -23,7 +54,7 @@
           <div class="container">
             <div class="col-md-12">
               <div class="row">                         
-                  <%= button_to  "Ajouter un projet", new_project_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
+                <%= button_to  "Ajouter un projet", new_project_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
               </div>
             </div>         
             <div class="table-responsive" style="margin-top:25px">
@@ -57,9 +88,9 @@
                       <%= project.body %></h2>
                     </td>
                     <td class="text-center">
-                    <%= button_to "Voir", project_path(project), method: :get, class: "btn btn-dark btn-round", style:"margin-bottom:5px" %>
-                    <%= button_to "Modifier", edit_project_path(project), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
-                    <%= button_to "Supprimer", [project], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>              
+                      <%= button_to "Voir", project_path(project), method: :get, class: "btn btn-dark btn-round", style:"margin-bottom:5px" %>
+                      <%= button_to "Modifier", edit_project_path(project), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
+                      <%= button_to "Supprimer", [project], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>              
                     </td>
                   </tr>   
                   <%end%>
@@ -75,7 +106,7 @@
           <div class="container">
             <div class="col-md-12">
               <div class="row">                         
-                  <%= button_to  "Ajouter une publication", new_publication_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
+                <%= button_to  "Ajouter une publication", new_publication_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
               </div>
             </div>         
             <div class="table-responsive" style="margin-top:25px">
@@ -103,8 +134,8 @@
                       <%= publication.title %></h2>
                     </td>
                     <td class="text-center">
-                    <%= button_to "Modifier", edit_publication_path(publication), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
-                    <%= button_to "Supprimer", [publication], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>              
+                      <%= button_to "Modifier", edit_publication_path(publication), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
+                      <%= button_to "Supprimer", [publication], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>              
                     </td>
                   </tr>   
                   <%end%>
@@ -118,29 +149,3 @@
   </div>
 </div>
 
-<ul>
-  <% if user_signed_in? %>
-  <li>
-    <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
-  </li>
-
-  <li>
-    User : <%= current_user.email %>
-  </li>
-
-  <li>
-    <%= link_to "Modifier le compte", edit_user_registration_path %>
-  </li>
-  <% end %>
-
-  <% if current_user.role == 'admin' %>
-</br>
-<li>
-  <%= link_to "Publications", publications_path %>
-</li>
-
-<li>
-  <%= link_to "Projets", projects_path, class: "nav-link active" %></li>
-</li>
-<% end %>
-</ul>
