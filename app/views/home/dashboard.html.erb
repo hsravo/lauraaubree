@@ -53,11 +53,11 @@
     <div class="row" id="dashcontent">
       <center><h3><i class="fas fa-list-alt"></i> Projets</h3></center>
       <div class="container">
-        <div class="col-md-12">
-          <div class="row" style="margin-left:185px">                         
+        <div class="col-md-12" id="dash-button">
+          <div class="row">
             <%= button_to  "Ajouter un projet", new_project_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
           </div>
-        </div>         
+        </div>
         <div class="table-responsive" style="margin-top:25px">
           <table class="table">
             <thead class="">
@@ -91,9 +91,9 @@
                 <td class="text-center">
                   <%= button_to "Voir", project_path(project), method: :get, class: "btn btn-dark btn-round", style:"margin-bottom:5px" %>
                   <%= button_to "Modifier", edit_project_path(project), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
-                  <%= button_to "Supprimer", [project], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>              
+                  <%= button_to "Supprimer", [project], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>
                 </td>
-              </tr>   
+              </tr>
               <%end%>
             </tbody>
           </table>
@@ -107,11 +107,11 @@
       <div class="row" id="dashcontent">
         <center><h3><i class="fas fa-list-alt"></i>  Publications</h3></center>
         <div class="container">
-          <div class="col-md-12">
-            <div class="row" style="margin-left:185px">                         
+          <div class="col-md-12" id="dash-button">
+            <div class="row">
               <%= button_to  "Ajouter une publication", new_publication_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
             </div>
-          </div>         
+          </div>
           <div class="table-responsive" style="margin-top:25px">
             <table class="table">
               <thead class="">
@@ -144,9 +144,9 @@
                   </td>
                   <td class="text-center">
                     <%= button_to "Modifier", edit_publication_path(publication), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
-                    <%= button_to "Supprimer", [publication], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>              
+                    <%= button_to "Supprimer", [publication], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>
                   </td>
-                </tr>   
+                </tr>
                 <%end%>
               </tbody>
             </table>

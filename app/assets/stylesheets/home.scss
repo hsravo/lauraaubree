@@ -14,6 +14,18 @@
     position: relative;
   }
 
+  footer {
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: normal;
+    color: #212529;
+    padding: 190px 0 60px;
+    bottom: 0;
+    display:flex;
+    justify-content: center;
+    font-family: 'PT Serif', serif;
+  }
+
 }
 
 @media only screen and (min-width: 730px) and (max-width: 870px) {
@@ -29,6 +41,18 @@
     position: relative;
   }
 
+  footer {
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: normal;
+    color: #212529;
+    padding: 190px 0 60px;
+    bottom: 0;
+    display:flex;
+    justify-content: center;
+    font-family: 'PT Serif', serif;
+  }
+
 }
 
 @media only screen and (min-width: 870px) {
@@ -42,6 +66,19 @@
     height: 466px;
     margin: 20px auto -160px;
     position: relative;
+  }
+
+
+  footer {
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: normal;
+    color: #212529;
+    padding: 350px 0 60px;
+    bottom: 0;
+    display:flex;
+    justify-content: center;
+    font-family: 'PT Serif', serif;
   }
 
 }
@@ -72,7 +109,7 @@
     animation:fade 36s infinite;
 -webkit-animation:fade 36s infinite;
 
-} 
+}
 .slide2 {
   background: url(/images/home/Patagonia-019.jpg)no-repeat center;
       background-size: cover;
@@ -407,7 +444,7 @@ a:hover {
   #mobile-contact {
     display:none !important;
   }
-  
+
   #desktop-contact {
     margin-top:50px;
     margin-bottom:10px;
@@ -549,4 +586,11 @@ h3 {
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+/* DASHBOARD MENU */
+
+#dash-button {
+  display:flex;
+  justify-content:center;
 }

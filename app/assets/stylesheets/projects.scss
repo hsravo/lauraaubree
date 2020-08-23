@@ -44,7 +44,7 @@ img {
   height: 250px;
 }
 
- 
+
 #project-column .overlay {
   z-index:998;
   position: absolute;
@@ -103,7 +103,7 @@ img {
     padding-left: 75px;
   }
 
-}   
+}
 
 @media (max-width: 999px) {
 
@@ -119,7 +119,7 @@ img {
     padding-left: 25px;
   }
 
-}      
+}
 
 @media (min-width: 730px) and (max-width: 750px) {
 
@@ -127,7 +127,7 @@ img {
     padding-left: 10px;
   }
 
-}   
+}
 
 @media (max-width: 730px) {
 
@@ -135,4 +135,16 @@ img {
     padding-left: 3px;
   }
 
-}   
+}
+
+footer {
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: normal;
+  color: #212529;
+  padding: 240px 0 60px;
+  bottom: 0;
+  display:flex;
+  justify-content: center;
+  font-family: 'PT Serif', serif;
+}
