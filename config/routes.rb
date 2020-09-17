@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   get '/contact', to: 'home#contact'
 
 
+
   scope module: 'admin' do #under admin scope without admin prefix
     resources :projects
+      get '/projects/:slug', to: 'projects#show'
     resources :publications
   end
 

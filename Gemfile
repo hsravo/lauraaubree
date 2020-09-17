@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '2.5.1'
 gem 'devise'
 gem 'table_print'
+gem 'friendly_id'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'popper_js'

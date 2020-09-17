@@ -4,8 +4,12 @@ class Project < ApplicationRecord
   has_one_attached :cover
   has_many_attached :images
 
-  validates :title, :body, presence: true 
+  validates :title, :body, presence: true
+  validates :slug, uniqueness: true
   validate :images_presence_format #image presence and format validation
+
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 
   private
 
