@@ -1,38 +1,40 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-    <div class="row" id="main-title">
-        <h1 style="float:left"><%= link_to "Projects/", projects_path, id: "project-index" %>
-        <h1 id="project-title" style="float:right"><%= @project.title %></h1><br></br>
-    </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <p><%= @project.body %></p>
+  <div class="row" id="main-title">
+    <h1 style="float:left"><%= link_to "Projects/", projects_path, id: "project-index" %>
+      <h1 id="project-title" style="float:right"><%= @project.title %></h1><br></br>
     </div>
   </div>
-</div>
 
-<div class="container" id="gallery-container">
-  <div class="row">
-    <% (0...@project.images.count).each do |image| %>
-    <div class="imgSlider gallery" id="project-img-column">
-      <%= link_to @project.images[image] do %>
-        <%= image_tag(@project.images[image]) %>
-      <% end %>
+  <div class="container">
+    <div class="row" id="project-presentation">
+      <div class="col" id="proj-text">
+        <div><%= @project.body %></div>
+      </div>
+      <div class="col" id="gallery-container">
+        <div class="row">
+          <% (0...@project.images.count).each do |image| %>
+          <div class="imgSlider gallery" id="project-img-column">
+            <%= link_to @project.images[image] do %>
+            <%= image_tag(@project.images[image]) %>
+            <% end %>
+          </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <% end %>
   </div>
-</div>
 
 
-<script>
-  window.onload = function() {
-    baguetteBox.run('.imgSlider', {
-      animation: 'fadeIn',
-      noScrollbars: true
-    });
-  };
-</script>
+
+
+
+  <script>
+    window.onload = function() {
+      baguetteBox.run('.imgSlider', {
+        animation: 'fadeIn',
+        noScrollbars: true
+      });
+    };
+  </script>

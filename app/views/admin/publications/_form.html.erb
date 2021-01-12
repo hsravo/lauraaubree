@@ -1,31 +1,43 @@
 <%= form_for @publication, url: [@publication], html: {class: 'form-horizontal'} do |form| %>
 
-  <% if @publication.errors.any? %>
-    <div class="alert alert-danger">
-      <ul>
-        <% @publication.errors.full_messages.each do |message| %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <% if @publication.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+          <% @publication.errors.full_messages.each do |message| %>
           <li><%= message %></li>
-        <% end %>
-      </ul>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+      <div class="row">
+
+        <div class="col-md-6">
+            <%= form.label :title, "Titre" %>
+            <%= form.text_field :title, class: 'form-control' %>
+            <%= form.label :body, "Description" %>
+            <%= form.text_area :body, class: 'form-control', rows: 8 %>
+        </div>
+
+        <div class="col-md-6">
+          <%= form.label :image, "Image" %>
+          <%= form.file_field :image, class: 'form-control' %>
+          <% unless publication.new_record? %>
+          <%= image_tag publication.image, :style => "width:300px;height:300px;" %>
+          <% end %>
+        </div>
+
+      </div>
+
+      <div class="actions" style="padding:20px">
+        <%= form.submit "Valider la publication", :class => "btn btn-lg btn-success" %>
+      </div>
+
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_area :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>

@@ -1,41 +1,67 @@
 <%= form_for @project, url: [@project], html: {class: 'form-horizontal'} do |form| %>
 
-  <% if @project.errors.any? %>
-    <div class="alert alert-danger">
-      <ul>
-        <% @project.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <% if @project.errors.any? %>
+          <div class="alert alert-danger">
+            <ul>
+              <% @project.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= form.label :title, "Titre" %>
+              <%= form.text_field :title, class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+                <%= form.label :slug, "URL" %>
+                <%= form.text_field :slug, class: 'form-control' %>
+            </div> 
+
+            <div class="form-group">
+              <%= form.label :cover, "Photo principale" %>
+              <%= form.file_field :cover, class: 'form-control' %>
+              <% unless project.new_record? %>
+                <%= image_tag project.cover, :style => "width:100px;height:100px;" %>
+              <% end %>
+            </div>
+
+            <div class="form-group">
+              <%= form.label :images, "Images du projet" %>
+              <%= form.file_field :images, multiple: true, class: 'form-control' %>
+            </div>  
+                    
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= form.label :body, "Texte (FR)" %>
+              <%= form.text_area :body, class: 'form-control', rows: 8 %>
+            </div>
+            <div class="form-group">
+              <%= form.label :body, "Texte (EN)" %>
+              <%= form.text_area :body, class: 'form-control', rows: 8 %>
+            </div>         
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+        </div>
+
+        <div class="actions"  style="padding:20px">
+          <%= form.submit "Valider le projet", :class => "btn btn-lg btn-success" %>
+        </div>
+      </div>    
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_area :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :slug, "URL" %>
-    <%= form.text_area :slug %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cover %>
-    <%= form.file_field :cover %>
-  </div>
-
-  <div class="field">
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
   </div>
 <% end %>

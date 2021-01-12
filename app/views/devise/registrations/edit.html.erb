@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-10 offset-md-1">
       <br><br><br>
 
       <h2>Modifier mon compte</h2></br>
@@ -8,31 +8,36 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="form-group">
-        <%= f.label :username, "Identifiant" %><br />
-        <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :username, "Identifiant" %><br />
+          <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+        </div>
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
 
-      <div class="form-group">
-        <%= f.label :password, "Mot de passe" %> <i>(ne rien écrire si vous ne souhaitez pas le modifier)</i><br />
-        <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
-        <% if @minimum_password_length %>
-        <em><%= @minimum_password_length %> caractères minimum</em>
-        <% end %>
-      </div>
+      <div class="row">
 
-      <div class="form-group">
-        <%= f.label :password_confirmation, "Confirmez votre mot de passe" %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+        <div class="col-md-6">
+          <%= f.label :password, "Mot de passe" %> <i>(ne rien écrire si vous ne souhaitez pas le modifier)</i><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+          <% if @minimum_password_length %>
+          <em><%= @minimum_password_length %> caractères minimum</em>
+          <% end %>
+        </div>
+
+        <div class="col-md-6">
+          <%= f.label :password_confirmation, "Confirmez votre mot de passe" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+        </div>
+
       </div>
 
       <div class="form-group">
@@ -47,7 +52,7 @@
 
       <p>Supprimer mon compte ?<%= button_to "Supprimer", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-lg btn-danger" %></p>
 
-      <%= link_to "Back", :back %>
+      <%= link_to "Retour", :back %>
 
     </div>
   </div>
