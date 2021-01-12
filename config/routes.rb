@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   scope module: 'admin' do #under admin scope without admin prefix
     resources :projects
       get '/projects/:slug', to: 'projects#show'
+      get '/projects/:slug', to: 'projects#edit'
     resources :publications
   end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

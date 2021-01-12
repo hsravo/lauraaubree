@@ -2,12 +2,12 @@
 
 <h1>Projects</h1>
 
-  <div class="container" id="desktop-container">
+  <div class="container" id="proj-menu">
     <div class="row"> 
       <% @projects.each do |project| %>
         <div class="column" id="project-column">
           <%= link_to project do %>
-            <% image_tag(project.cover, :class => "nav-title")  %>  
+            <% image_tag(project.cover, :class => "project-cover") %>  
           <% end %>
         </div>
       <% end %>

@@ -1,24 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<div class="container">
+    <div class="row" id="main-title">
+        <h1 style="float:left"><%= link_to "Projects/", projects_path, id: "project-index" %>
+        <h1 id="project-title" style="float:right"><%= @project.title %></h1><br></br>
+    </div>
+</div>
 
-<% (0...@project.images.count).each do |image| %>
-  <div style="width:400px; height:400px">
-    <%= image_tag(@project.images[image], style:"width:auto; height:100%") %>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p><%= @project.body %></p>
+    </div>
   </div>
-<% end %>
+</div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @project.body %>
-</p>
+<div class="container" id="gallery-container">
+  <div class="row">
+    <% (0...@project.images.count).each do |image| %>
+    <div class="imgSlider gallery" id="project-img-column">
+      <%= link_to @project.images[image] do %>
+        <%= image_tag(@project.images[image]) %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-<% if user_signed_in? %>
-  <% if isAdmin? %>
-    <%= link_to 'Edit', edit_project_path(@project) %> |
-    <%= link_to 'Back', projects_path %>
-  <% end %>
-<% end %>
+
+<script>
+  window.onload = function() {
+    baguetteBox.run('.imgSlider', {
+      animation: 'fadeIn',
+      noScrollbars: true
+    });
+  };
+</script>
