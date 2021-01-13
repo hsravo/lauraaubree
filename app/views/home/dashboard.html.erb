@@ -91,7 +91,7 @@
                 <td class="text-center">
                   <%= button_to "Voir", project_path(project), method: :get, class: "btn btn-dark btn-round", style:"margin-bottom:5px" %>
                   <%= button_to "Modifier", edit_project_path(project), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
-                  <%= button_to "Supprimer", [project], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>
+                  <%= button_to "Supprimer", [project], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Supprimer ce projet ?' } %>
                 </td>
               </tr>
               <%end%>
@@ -144,7 +144,7 @@
                   </td>
                   <td class="text-center">
                     <%= button_to "Modifier", edit_publication_path(publication), method: :get, class: "btn btn-info btn-round", style:"margin-bottom:5px" %>
-                    <%= button_to "Supprimer", [publication], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Are you sure?' } %>
+                    <%= button_to "Supprimer", [publication], method: :delete, class: "btn btn-danger btn-round", style:"margin-top:5px", data: { confirm: 'Supprimer cette publication ?' } %>
                   </td>
                 </tr>
                 <%end%>
