@@ -87,11 +87,12 @@
 
   #homeslider {
     float:center;
+    min-height:60vh;
   }
 
   .slider {
     max-width: 1110px;
-    height: 550px;
+    min-height: 550px;
     margin: 20px auto -160px;
     position: relative;
   }
@@ -217,6 +218,10 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
+
+  #image-field {
+    border-right:1px solid black;
+  }
 
 
   #description-field {
@@ -348,25 +353,25 @@ body {
 
 /* CONTACT PAGE */
 
-body {
-  justify-content: center;
-}
+
 
 h1 {
   font-family: 'PT Serif', serif;
 }
 
-p {
-  font-size: 22px;
-}
+#contact-field {
+  p {
+    font-size: 22px;
+  }
 
-a {
-  transition:0.3s;
-}
+  a {
+    transition:0.3s;
+  }
 
-a:hover {
-  text-decoration:none;
-  color:#888a8c;
+  a:hover {
+    text-decoration:none;
+    color:#888a8c;
+  }
 }
 
 #contact-field a:hover {
@@ -378,75 +383,31 @@ a:hover {
   font-size: 32px;
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 1000px) {
 
-  #desktop-contact {
-    display:none !important;
+  #contact-container {
+    min-height:50vh;
+    margin-top:5vh;
   }
 
-  #mobile-contact ul {
-    margin-right: 42px;
-    padding-top:30px;
-    font-size: 18px;
-  }
-
-  .about-title {
-    font-size: 32px;
-    font-style: bold;
-  }
-
-  #contact-field {
+  #contact-field, #contact-img-field {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-
-  img {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    height: auto;
-    max-height: 400px;
-    width: auto;
-    max-width: 400px;
-    background-size: cover;
+    margin-top: 5vh;
   }
 
 }
 
 @media only screen and (min-width: 1000px) {
 
-  #mobile-contact {
-    display:none !important;
-  }
-
-  #desktop-contact {
-    margin-top:50px;
-    margin-bottom:10px;
-    padding-left: 160px;
+  #contact-container {
+    min-height:40vh;
+    margin-top:20vh;
   }
 
   #contact-field {
-    display: flex;
-    align-items: left;
-  }
-
-  #contact-field li {
-    display: flex;
-    justify-content: left;
-  }
-
-  img {
-
-    max-height: 400px;
-    object-fit: cover !important;
-    display: flex;
-    justify-content: left;
+    border-right:1px solid black;
   }
 
 }

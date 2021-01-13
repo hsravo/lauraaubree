@@ -173,6 +173,8 @@ footer {
   #project-presentation {
     display:flex;
     flex-direction: row;
+    min-height:60vh;
+    margin-top:10vh;
   }
 
   #proj-text {
@@ -182,7 +184,7 @@ footer {
 
   #gallery-container {
     padding-left:2em;
-    margin-top:-25px;
+    margin-top:1vh;
   }
 
   #project-img-column img {
