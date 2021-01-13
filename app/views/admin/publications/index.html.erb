@@ -2,25 +2,29 @@
 
 <h1>Publications</h1>
 
-<div class="row" id="desktop-gallery">
-  <% @publications.each do |publication| %>
-    <div class="imgSlider gallery" id="img-column">
-      <%= link_to publication.image do %>
-        <% image_tag(publication.image) %>  
-      <% end %>
-    </div>
-  <% end %>
-</div>
+<% if @publications.length >= 1 %>
 
-<div class="row" id="mobile-gallery">
-  <div class="imgSlider gallery" id="img-column">
+  <div class="row" id="desktop-gallery">
     <% @publications.each do |publication| %>
-      <%= link_to publication.image do %>
-        <% image_tag(publication.image) %>  
-      <% end %>
+      <div class="imgSlider gallery" id="img-column">
+        <%= link_to publication.image do %>
+          <% image_tag(publication.image) %>  
+        <% end %>
+      </div>
     <% end %>
   </div>
-</div>
+
+  <div class="row" id="mobile-gallery">
+    <div class="imgSlider gallery" id="img-column">
+      <% @publications.each do |publication| %>
+        <%= link_to publication.image do %>
+          <% image_tag(publication.image) %>  
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+<% end %>
 
 <br>
 

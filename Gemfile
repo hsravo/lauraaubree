@@ -11,6 +11,7 @@ gem 'popper_js'
 gem 'simple_form'
 gem "rubycritic", require: false
 gem "aws-sdk-s3", require: false
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -52,6 +53,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   gem 'guard-rspec', require: false
   gem 'factory_bot_rails'
+
 end
 
 group :development do
