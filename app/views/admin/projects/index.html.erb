@@ -2,30 +2,31 @@
 
 <h1>Projects</h1>
 
-  <% if @projects.length >= 1 %>
+<% if @projects.length >= 1 %>
 
-    <div class="container" id="proj-menu">
-      <div class="row"> 
-        <% @projects.each do |project| %>
-          <div class="column" id="project-column">
-            <%= link_to project do %>
-              <% image_tag(project.cover, :class => "project-cover") %>  
-            <% end %>
-          </div>
-        <% end %>
-      </div>
+  <div class="container" id="proj-menu">
+    <div class="row"> 
+      <% @projects.each do |project| %>
+        <div class="column" id="project-column">
+          <%= link_to project do %>
+            <% image_tag(project.cover, :class => "project-cover") %>  
+          <% end %>
+        </div>
+      <% end %>
     </div>
+  </div>
 
+
+  <br>
+
+  <% if user_signed_in? %>
+    <% if isAdmin? %>
+      <div class="row">                         
+        <div class="col-md-6 ml-auto mr-auto">
+          <%= button_to  "Ajouter un projet", new_project_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 
-<br>
-
-<% if user_signed_in? %>
-  <% if isAdmin? %>
-    <div class="row">                         
-      <div class="col-md-6 ml-auto mr-auto">
-        <%= button_to  "Ajouter un projet", new_project_path, method: :get, class: "btn btn-success btn-round btn-lg" %>
-      </div>
-    </div>
-  <% end %>
 <% end %>
