@@ -69,4 +69,5 @@ Rails.application.configure do
    port:                 1025,
    domain:               'localhost' }
 
+
 end
