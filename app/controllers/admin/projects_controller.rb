@@ -32,7 +32,7 @@ module Admin
 
     def update
       @project.update(project_params)
-      if @project.save #si c'est tout OK, on redirige au pets index
+      if @project.save 
         redirect_to dashboard_path, success: 'Modifications effectuées !'
       else
         render :edit
