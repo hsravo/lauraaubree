@@ -87,12 +87,12 @@
 
   #homeslider {
     float:center;
-    min-height:60vh;
+    height:55vh;
   }
 
   .slider {
-    max-width: 1110px;
-    min-height: 550px;
+    max-width: 1500px;
+    min-height: 700px;
     margin: 20px auto -160px;
     position: relative;
   }
@@ -208,16 +208,16 @@ body {
   justify-content: center;
 }
 
-#about-view {
-  min-height:60vh;
-  margin-top:10vh;
-}
-
 #description-field {
   display:flex;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 991px) {
+
+  #about-view {
+    max-height:45vh;
+    margin-top:10vh;
+  }
 
   #image-field {
     border-right:1px solid black;
@@ -289,7 +289,7 @@ body {
   
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 990px) {
 
 
   #description-field ul {
@@ -403,7 +403,7 @@ h1 {
 
   #contact-container {
     min-height:40vh;
-    margin-top:20vh;
+    margin-top:15vh;
   }
 
   #contact-field {

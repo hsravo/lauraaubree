@@ -82,10 +82,19 @@ h1 {
 
 }
 
+@media (min-width: 1200px) {
+
+  #proj-menu {
+    min-height:45vh;
+  }
+
+}
+
 @media (max-width: 1199px) {
 
   #proj-menu {
     padding-left: 75px;
+    min-height:45vh;
   }
 
 }
