@@ -278,7 +278,7 @@ body {
 
   #about-img {
     margin: 0;
-    max-height: 550px;
+    max-height:550px;
     width: auto;
     background-size: cover;
     &:hover {
@@ -333,11 +333,11 @@ body {
 
   #image-field {
     margin-bottom:5vh;
-    img {
+    #about-img {
       display: flex;
       margin: auto;
       justify-content: center;
-      max-height: 550px;
+      max-height: 450px;
       width: auto;
       background-size: cover;
       &:hover {
