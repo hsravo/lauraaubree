@@ -1,7 +1,9 @@
 <h2>Bonjour <%= @user.email %> !</h2>
 
-<p>Vous pouvez confirmer la création de votre compte en cliquant sur le lien ci-dessous :</p>
+<p>Vous pouvez confirmer la création de votre compte sur www.laura-aubree.fr en cliquant sur le lien ci-dessous :</p>
 
 <%= link_to 'Confirmer mon compte', confirmation_url(@resource, confirmation_token: @token) %>
 
-<p>www.laura-aubree.fr</p>
+<p><strong>ATTENTION :</strong> vous ne pourrez modifier le contenu du site que si votre compte possède le rôle "Administrateur".</p>
+
+<small>www.laura-aubree.fr</small>
