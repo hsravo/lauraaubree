@@ -4,7 +4,7 @@ class Project < ApplicationRecord
   has_one_attached :cover
   has_many_attached :images
 
-  validates :title, :body, presence: true
+  validates :title, presence: true
   validates :slug, uniqueness: true
   validate :images_presence_format #image presence and format validation
 

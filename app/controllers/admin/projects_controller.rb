@@ -54,7 +54,7 @@ module Admin
 
       # Only allow a list of trusted parameters through.
       def project_params
-        params.require(:project).permit(:title, :slug, :body, :cover, images: [])
+        params.require(:project).permit(:title, :slug, :body_fr, :body_en, :cover, images: [])
       end
 
       def only_admin
