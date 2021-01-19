@@ -20,7 +20,7 @@
       <%= link_to 'Laura Aubrée', root_path, class: 'nav-title' %>
       <% if user_signed_in? %>
         <% if isAdmin? %>
-          <%= link_to 'Dashboard', dashboard_path, class: 'nav-title' %>
+          <%= link_to 'Administrateur', dashboard_path, class: 'nav-title' %>
         <% end %>
       <% end %>
       <%= link_to 'Projects', projects_path, class: 'nav-title' %>

@@ -414,18 +414,40 @@ h1 {
 
 /* ADMIN LOGIN PAGE */
 
-#admin-header {
-  background-image: url(asset-path("transition08.jpg"));
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding-top: 10px;
-  margin-top: 20px;
-  margin-left: 140px;
-  margin-right: 140px;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
+@media only screen and (max-width: 869px) {
+
+  #admin-header {
+    background-image: url(asset-path("transition08.jpg"));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
 }
+
+@media only screen and (min-width: 870px) {
+
+  #admin-header {
+    background-image: url(asset-path("transition08.jpg"));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+}
+
 
 
 .header_link_admin {
@@ -465,18 +487,40 @@ h3 {
   padding-right:150px;
 }
 
-#dashboard-header {
-  background-image: url(asset-path("transition01.jpg"));
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding-top: 10px;
-  margin-top: 20px;
-  margin-left: 140px;
-  margin-right: 140px;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
+@media only screen and (max-width: 869px) {
+
+  #dashboard-header {
+    background-image: url(asset-path("transition01.jpg"));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
 }
+
+@media only screen and (min-width: 870px) {
+
+  #dashboard-header {
+    background-image: url(asset-path("transition01.jpg"));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+}
+
 
 * {box-sizing: border-box}
 
@@ -535,3 +579,4 @@ h3 {
   display:flex;
   justify-content:center;
 }
+
