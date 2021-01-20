@@ -9,9 +9,11 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'popper_js'
 gem 'simple_form'
+gem 'quilljs-rails'
 gem 'dotenv-rails', groups: [:development, :test]
 gem "rubycritic", require: false
 gem "aws-sdk-s3", require: false
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

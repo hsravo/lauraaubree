@@ -15,7 +15,7 @@
 //= require popper
 //= require bootstrap
 //= require activestorage
-//= require nav
 //= require home
+//= require nav
 //= require_tree .
 
