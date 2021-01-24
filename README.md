@@ -1,24 +1,7 @@
-# README
+Complete portfolio project made for photographer Laura Aubrée :camera: :notebook:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You can visit the website and appreciate her work on https://laura-aubree.fr/.
 
-Things you may want to cover:
+** Ruby on Rails 5.2.4 & Ruby 2.5.1 version
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- hsravo
