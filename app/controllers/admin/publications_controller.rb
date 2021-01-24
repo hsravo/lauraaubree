@@ -28,7 +28,7 @@ module Admin
 
     def update
       @publication.update(publication_params)
-      if @publication.save #si c'est tout OK, on redirige au pets index
+      if @publication.save
         redirect_to dashboard_path, success: 'Modifications effectuées !'
       else
         render :edit
@@ -53,11 +53,11 @@ module Admin
       end
 
       def only_admin
-        if !user_signed_in? #si l'user n'est pas connecté
-          redirect_to root_path, danger: "Vous ne pouvez pas accéder à cette page" #redirigé vers la page d'inscription
-        elsif user_signed_in? #si l'user est connecté
-          if current_user.role != 'admin' #mais qu'il n'est pas admin
-            redirect_to root_path, danger: "Vous n'avez pas les droits pour accéder à cette page" #redirigé vers la page d'accueil
+        if !user_signed_in?
+          redirect_to root_path, danger: "Vous ne pouvez pas accéder à cette page"
+        elsif user_signed_in?
+          if current_user.role != 'admin'
+            redirect_to root_path, danger: "Vous n'avez pas les droits pour accéder à cette page"
           end
         end
       end

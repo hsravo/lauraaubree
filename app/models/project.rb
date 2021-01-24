@@ -6,7 +6,7 @@ class Project < ApplicationRecord
 
   validates :title, presence: true
   validates :slug, uniqueness: true
-  validate :images_presence_format #image presence and format validation
+  validate :images_presence_format
 
   extend FriendlyId
   friendly_id :title, use: :slugged

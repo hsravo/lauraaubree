@@ -18,4 +18,3 @@
 //= require home
 //= require nav
 //= require_tree .
-

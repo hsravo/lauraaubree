@@ -10,9 +10,12 @@ gem 'jquery-rails'
 gem 'popper_js'
 gem 'simple_form'
 gem 'quilljs-rails'
+gem 'actiontext', github: 'kobaltz/actiontext', branch: 'archive', require: 'action_text'
+gem 'image_processing'
 gem 'dotenv-rails', groups: [:development, :test]
 gem "rubycritic", require: false
 gem "aws-sdk-s3", require: false
+
 
 
 

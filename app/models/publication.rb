@@ -4,14 +4,14 @@ class Publication < ApplicationRecord
   has_one_attached :image
 
   validates :title, :body, presence: true
-  validate :image_presence_format #image presence and format validation
+  validate :image_presence_format
 
   private
 
   def image_presence_format
-    if !image.attached? #image presence
+    if !image.attached?
       errors.add(:image, "manquante !")
-    elsif image.attached? #image format JPG or PNG
+    elsif image.attached?
       if !image.content_type.in?(%w(image/jpg image/jpeg image/png))
         errors.add(:image, "doit être au format JPG ou PNG !")
       end
